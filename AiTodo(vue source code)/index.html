@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiTodo</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+
+<style>
+    body::before {
+        display: block;
+        content: ' ';
+        position: fixed;
+        top: 0;
+
+        /*background: url(v-bind('url')) center 0 no-repeat;*/
+        background: url("./src/assets/bg.png") no-repeat center 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+    }
+</style>
+</html>

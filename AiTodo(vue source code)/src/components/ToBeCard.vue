@@ -1,0 +1,47 @@
+<!--
+Description: 显示数据的卡片
+Date: 2022-12-07
+Author: Chelly
+Editor: IntelliJ IDEA 2022.3 (Ultimate Edition)
+-->
+<template>
+
+  <a-card :title="val.title" class="be">
+    <template #extra>
+      结束日期: {{ val.date }} |
+      <a-radio-group>
+        <UpdataButton :id="val.id" :title="val.title" :date="val.date" :content="val.content"></UpdataButton>
+        <FinishButton :id="val.id"></FinishButton>
+      </a-radio-group>
+    </template>
+    {{ val.content }}
+  </a-card>
+
+</template>
+
+<script lang="ts">
+import UpdataButton from "./UpdateButton.vue";
+import FinishButton from "./FinishButton.vue";
+
+
+export default {
+  name: "ToBeCard",
+
+  components: {FinishButton, UpdataButton},
+  props: {
+    val: {
+      id: String,
+      title: String,
+      date: String,
+      content: String,
+    }
+  }
+
+}
+</script>
+
+<style scoped>
+.be {
+  color: aqua;
+}
+</style>
